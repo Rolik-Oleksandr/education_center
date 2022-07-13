@@ -1,5 +1,7 @@
 package com.knubisoft.base.arrays;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 public class ArraysTasksImpl implements ArraysTasks {
 
     @Override
@@ -16,12 +18,33 @@ public class ArraysTasksImpl implements ArraysTasks {
 
     @Override
     public int[] mergeArrays(int[] array1, int[] array2) {
-        return null;
+        int[] result = new int[array1.length + array2.length];
+        int count = 0;
+        for(int i = 0; i < array1.length; i++){
+            result[i] = array1[i];
+            count++;
+        }
+        for(int j = 0; j < array2.length; j++){
+            result[count++] = array2[j];
+        }
+        return result;
+
     }
 
     @Override
     public int[] findMax3InArray(int[] array) {
-        return null;
+//        if (array.length < 3) {
+//            return array;
+//        }
+//        int[] result = new int[3];
+//        int max = 0;
+//
+//        for(int i = 0; i < array.length; i++){
+//            if(array[i] > max){
+//                max = array[i];
+//            }
+//        }
+//        return result;
     }
 
     @Override
